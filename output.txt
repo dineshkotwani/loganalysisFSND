@@ -8,5 +8,6 @@ Ursula La Multa -- 507594 views
 Rudolf von Treppenwitz -- 423457 views
 Anonymous Contributor -- 170098 views
 
+
 Days where error percent of requests was greater than 1% : 
 2016-07-17 -- 2.26%
