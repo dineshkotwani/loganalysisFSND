@@ -16,7 +16,7 @@ def get_popular_posts():
 
 
 def get_popular_authors():
-    """Return top 3 most popular authors from the news database."""
+    """Return top  most popular authors from the news database."""
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
     c.execute("SELECT name,viewcounts from popularauthors")
@@ -50,7 +50,7 @@ for post in posts:
 
 outputfile.write("\n")
 outputfile.write("\n")
-outputfile.write("Top 3 popular authors are : ")
+outputfile.write("Top  popular authors are : ")
 
 for author in authors:
     outputfile.write("\n")

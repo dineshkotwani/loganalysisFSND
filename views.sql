@@ -4,7 +4,7 @@ select a.title,Stats.reads from (select substr(path,10) as sluglog,count(path) a
 
 create or replace view popularauthors as 
 select authortest.name,sum(authortest.reads) as viewcounts  from (select Stats.sluglog,Stats.reads,a.author,au.name from (select substr(path,10) as sluglog,count(path) as reads  from log group by path ) as Stats join articles a on a.slug = Stats.sluglog
-join authors au on au.id =a.author order by Stats.reads desc) as authortest group by authortest.name order by viewcounts desc LIMIT 3 ;
+join authors au on au.id =a.author order by Stats.reads desc) as authortest group by authortest.name order by viewcounts desc ;
 
 
 create or replace view failureday as 
